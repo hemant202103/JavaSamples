@@ -5,6 +5,8 @@ public class StringExample {
         //String demo -1
         String a = "He";
         String b = a.concat("mant");  //a still referencing to "He" created in string pool.
+        //value is cached in pool
+//        String b = new StringBuilder(a).append("mant").toString();   ---internal conversion
         System.out.println(a);
         System.out.println(b);  // b referencing to string literal "Hemant" created in string pool
         System.out.println(b.equals(a));
